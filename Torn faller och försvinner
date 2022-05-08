@@ -1,0 +1,13 @@
+game.Workspace.Tower.Anchored = true
+game.Workspace.Tower.Touched:Connect(function()
+	game.Workspace.Tower.Anchored = false
+
+	wait(5)
+
+	game.Workspace.Tower.Parent = game.ReplicatedStorage
+	
+	wait(5)
+	
+	game.ReplicatedStorage.Tower.Parent = game.Workspace
+	warn("Tornet dök upp!")
+end)
